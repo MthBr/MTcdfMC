@@ -1,0 +1,34 @@
+name: cdf-env
+channels:
+  #- ngsolve
+  - conda-forge
+  - defaults
+dependencies:
+  - pip
+  - "python>=3.6"
+  - numpy
+  - matplotlib
+  - pathlib
+  - pep8
+  - pylint
+  - seaborn
+  - jupyter
+  - gstools
+  - scipy
+  - cython  # per pyamgx
+  - "fipy>=3.4"
+  #- meshio
+  #- trilinos
+  - pytrilinos # solo per tests
+  - pyamg
+  # - sfepy
+  #- pysparse # only for py2
+  #- ngsolve
+  ####- fenics
+  #Pysparse, SciPy or Trilinos
+  - pip:
+      #- "fipy>=3.4"
+      #- pysparse # only for py2
+      #- meshzoo
+      #- pyamg
+      - -e .
